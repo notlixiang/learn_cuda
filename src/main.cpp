@@ -1,6 +1,6 @@
 /*
  * @Date: 2020-09-11 14:42:51
- * @LastEditTime: 2020-09-11 15:19:58
+ * @LastEditTime: 2020-09-11 15:21:05
  * @LastEditors: Li Xiang
  * @Description: learn_cuda
  * @FilePath: /src/learn_cuda/src/main.cpp
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     free(B);
     free(C);
     
-    // ros::init(argc, argv, "learn_cuda");
-    // ros::NodeHandle n;
-    // ros::Rate loop_rate(10);
+    ros::init(argc, argv, "learn_cuda");
+    ros::NodeHandle n;
+    ros::Rate loop_rate(10);
 }
