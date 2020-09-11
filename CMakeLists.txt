@@ -19,7 +19,7 @@ catkin_package(
 )
 
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -27,3 +27,8 @@ add_library(cudaMatMul src/cudaMatMul.cu src/cudaMatMul.h)
 
 add_executable(main src/main.cpp)
 target_link_libraries(main cudaMatMul)
+
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
+find_package(cuBLAS REQUIRED)
+add_executable(cublasMatMul src/cublasMatMul.cu)
+target_link_libraries(cublasMatMul PRIVATE ${CUBLAS_LIBRARIES})
