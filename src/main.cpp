@@ -1,3 +1,12 @@
+/*
+ * @Date: 2020-09-11 14:42:51
+ * @LastEditTime: 2020-09-11 15:19:58
+ * @LastEditors: Li Xiang
+ * @Description: learn_cuda
+ * @FilePath: /src/learn_cuda/src/main.cpp
+ */
+
+#include <ros/ros.h>
 #include <iostream>
 #include <math.h>
 #include <chrono>
@@ -11,7 +20,7 @@ using namespace std::chrono;
 #define K 1000
 #define N 10000
 
-int main()
+int main(int argc, char **argv)
 {
     float *A = new float[M * K];
     float *B = new float[K * N];
@@ -45,4 +54,8 @@ int main()
     free(A);
     free(B);
     free(C);
+    
+    // ros::init(argc, argv, "learn_cuda");
+    // ros::NodeHandle n;
+    // ros::Rate loop_rate(10);
 }

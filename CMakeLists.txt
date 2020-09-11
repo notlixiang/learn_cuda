@@ -26,7 +26,7 @@ include_directories(
 add_library(cudaMatMul src/cudaMatMul.cu src/cudaMatMul.h)
 
 add_executable(main src/main.cpp)
-target_link_libraries(main cudaMatMul)
+target_link_libraries(main cudaMatMul ${catkin_LIBRARIES})
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
 find_package(cuBLAS REQUIRED)
