@@ -76,7 +76,7 @@ void MatMul(const Matrix A, const Matrix B, Matrix C)
 
 // Matrix multiplication kernel called by MatMul()
  __global__ void MatMulKernel(Matrix A, Matrix B, Matrix C)
-{
+{                      
     // Block row and column
     int blockRow = blockIdx.y;
     int blockCol = blockIdx.x;
